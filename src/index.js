@@ -10,6 +10,7 @@ import Started from "./pages/Started";
 import Ragistration from "./pages/Ragistration";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import firebaseConfig from "./firebaseconig";
 
 const router = createBrowserRouter([
   {
