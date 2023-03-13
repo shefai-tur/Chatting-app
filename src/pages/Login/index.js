@@ -9,6 +9,9 @@ const Login = () => {
         <h1 className="text-white text-4xl mr-20  font-nuni font-bold">
           Get started with easily register
         </h1>
+        <h1 className="text-white text-4xl mr-20  font-nuni font-bold">
+          Get started with easily register
+        </h1>
         <h2 className="text-white text-xl mr-20 mt-2.5 font-nuni font-regular">Free register and you can enjoy it</h2>
                
         <div className="relative w-96 border border-primary border-2px rounded-[10px] mt-14">
