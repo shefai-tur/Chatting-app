@@ -81,9 +81,6 @@ const Login = () => {
           <h1 className="text-white text-4xl mr-20  font-nuni font-bold">
             Login to your account!
           </h1>
-          <h1 className="text-white text-4xl mr-20  font-nuni font-bold">
-            Login to your account!
-          </h1>
           <div
             onClick={handelglogin}
             className="relative border py-2 w-[50%] mt-2 bg-primary rounded-lg"
