@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { getAuth, signInWithEmailAndPassword,signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { Rings } from "react-loader-spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -56,11 +61,11 @@ const Login = () => {
         }
       });
   };
-  let handelglogin=()=>{
-    signInWithPopup(auth, provider).then(()=>{
+  let handelglogin = () => {
+    signInWithPopup(auth, provider).then(() => {
       navigate("/home");
-    })
-  }
+    });
+  };
   let handelEay = () => {
     if (eay) {
       setEay(false);
@@ -76,7 +81,10 @@ const Login = () => {
           <h1 className="text-white text-4xl mr-20  font-nuni font-bold">
             Login to your account!
           </h1>
-          <div onClick={handelglogin} className="relative border py-2 w-[50%] mt-2 bg-primary rounded-lg">
+          <div
+            onClick={handelglogin}
+            className="relative border py-2 w-[50%] mt-2 bg-primary rounded-lg"
+          >
             <h2 className=" text-white text-xl  mt-2.5 ml-10 font-nuni font-regular">
               Login with Google
             </h2>
