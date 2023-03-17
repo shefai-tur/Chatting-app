@@ -11,9 +11,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FcGoogle } from "react-icons/fc";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import { userLoginInfo } from "../../slice/userSlice";
 const Login = () => {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
+  const dispatch = useDispatch()
   let navigate = useNavigate();
   let [email, setEmail] = useState("");
   let [erremail, setErremail] = useState("");
@@ -38,9 +41,11 @@ const Login = () => {
       setErrPassword("Enter Your Password");
     }
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => {
+      .then((user) => {
         setLoginsuc("SignIn Successfuly");
         toast("Login Successful");
+        dispatch(userLoginInfo(user.user))
+       localStorage.setItem("userInfo",JSON.stringify(user))
         setLoader(false);
         setTimeout(() => {
           navigate("/home");

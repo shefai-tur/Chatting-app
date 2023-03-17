@@ -13,6 +13,8 @@ import Home from "./pages/Home";
 import Forgetpassword from "./componets/Forgetpassword";
 import Message from "./componets/Message";
 import firebaseConfig from "./firebaseconig";
+import store from './store'
+import { Provider } from 'react-redux'
 
 const router = createBrowserRouter([
   {
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>);
+<Provider store={store}>
+<RouterProvider router={router} />
+</Provider>
+  );
