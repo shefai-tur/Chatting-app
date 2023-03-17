@@ -10,6 +10,8 @@ import Started from "./pages/Started";
 import Ragistration from "./pages/Ragistration";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Forgetpassword from "./componets/Forgetpassword";
+import Message from "./componets/Message";
 import firebaseConfig from "./firebaseconig";
 
 const router = createBrowserRouter([
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path: "home",
     element:<Home/>,
+  },
+  {
+    path: "forgetpassword",
+    element:<Forgetpassword/>,
+  },
+  {
+    path: "message",
+    element:<Message/>,
   },
 ]);
 

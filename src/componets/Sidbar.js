@@ -10,7 +10,7 @@ const Sidbar = () => {
                 <img className='px-10 pt-8 rounded-full ' src="images/profileimg.png" alt="profileimg" loading='lazy'/>
             </image>
             <div className='px-16 pt-20'>
-           <AiFillHome className='text-5xl text-white '/>
+           <AiFillHome className='text-5xl text-white'/>
             </div>
             <div className='px-16 pt-20'>
            <FiMessageSquare className='text-5xl text-white '/>

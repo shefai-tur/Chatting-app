@@ -49,7 +49,6 @@ const Login = () => {
       })
       .catch((error) => {
         const errorCode = error.code;
-        console.log(errorCode, "..errorcode");
         if (errorCode.includes("auth/wrong-password")) {
           setErrPassword("password Not Correct");
         }
@@ -157,7 +156,7 @@ const Login = () => {
             </span>
           </p>
           <p className="mt-2 ml-28 text-sm font-nuni font-bold text-primary">
-            Forget Password
+           <Link to="/forgetpassword">Forget Password</Link> 
           </p>
         </div>
       </div>
