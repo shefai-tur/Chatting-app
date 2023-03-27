@@ -22,7 +22,7 @@ const Home = () => {
     <div className='bg-page'>
         <div className="flex p-6 gap-x-11	">
         <div className="w-[186px]">
-            <Sidbar/>
+            <Sidbar active="home"/>
         </div>
         <div className="w-[573px]">
          <Search/>
