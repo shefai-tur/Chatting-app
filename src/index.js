@@ -12,6 +12,8 @@ import Message from "./pages/Message/Message";
 import firebaseConfig from "./firebaseconig";
 import store from "./store";
 import { Provider } from "react-redux";
+import Settings from "./pages/Settings";
+import Notification from "./pages/Notification";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
   {
     path: "/message",
     element: <Message />,
+  },
+  {
+    path: "/notification",
+    element: <Notification/>,
+  },
+  {
+    path: "/settings",
+    element: <Settings/>,
   },
   
 ]);

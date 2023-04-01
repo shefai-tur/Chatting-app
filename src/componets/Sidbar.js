@@ -7,7 +7,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { userLoginInfo } from "../slice/userSlice";
-const Sidbar = ({active}) => {
+const Sidbar = ({ active }) => {
   const auth = getAuth();
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -32,47 +32,58 @@ const Sidbar = ({active}) => {
         </image>
 
         <div
-          className={`px-16 pt-20 relative z-[1] after:z-[-1]
-          ${active == "home"&&" after:bg-white"}after:w-[160px] after:h-[88px] after:absolute 
-          after:top-16 after:right-0 after:rounded-tl-lg after:rounded-bl-lg  after:content-['']
-           before:w-2.5 before:h-[88px]  before:bg-primary before:absolute before:top-16 
-           before:right-0 before:content-[''] before:rounded-tl-lg before:rounded-bl-lg`}
+          className={`${
+            active == "home" &&
+            "relative z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
+          }`}
         >
           <Link to="/home">
-          <AiFillHome className={`text-5xl ${
-              active == "home" ? " text-white" : " text-black"
-            }`} />
-            </Link>
-        </div>
-         
-
-        <div className={`px-16 pt-20 relative z-[1] after:z-[-1]
-          ${active=="msg"&&" after:bg-white"}after:w-[160px] after:h-[88px] after:absolute 
-          after:top-16 after:right-0 after:rounded-tl-lg after:rounded-bl-lg  after:content-['']
-           before:w-2.5 before:h-[88px]  before:bg-primary before:absolute before:top-16 
-           before:right-0 before:content-[''] before:rounded-tl-lg before:rounded-bl-lg`}>
-            <Link to="/message">
-          <FiMessageSquare
-            className={`text-5xl ${
-              active == "msg" ? " text-white" : " text-black"
-            }`}
-          />
+            <AiFillHome
+              className={`mx-16 text-5xl ${
+                active == "home" ? " text-primary" : " text-white my-20"
+              }`}
+            />
           </Link>
         </div>
-       
-        <div className="px-16 pt-20 relative z-[1] after:z-[-1]
-         after:bg-white after:w-[160px] after:h-[88px] after:absolute 
-          after:top-16 after:right-0 after:rounded-tl-lg after:rounded-bl-lg  after:content-['']
-           before:w-2.5 before:h-[88px]  before:bg-primary before:absolute before:top-16 
-           before:right-0 before:content-[''] before:rounded-tl-lg before:rounded-bl-lg">
-        <IoMdNotifications
-            className="text-5xl text-black " 
-          />
-        
-         
+
+        <div
+          className={`${
+            active == "msg" &&
+            "relative z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
+          }`}
+          >
+          <Link to="/message">
+            <FiMessageSquare
+              className={`mx-16 text-5xl ${
+                active == "msg" ? " text-primary" : " text-white my-20"
+              }`}
+            />
+          </Link>
         </div>
-        <div className="px-16 pt-20">
-          <IoMdSettings className="text-5xl text-white " />
+
+        <div className={`${
+            active == "ntf" &&
+            "relative z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
+          }`}>
+          <Link to="/notification">
+            <IoMdNotifications
+              className={`mx-16 text-5xl ${
+                active == "ntf" ? " text-primary" : " text-white my-20"
+              }`}
+            />
+          </Link>
+        </div>
+        <div className={`${
+            active == "stng" &&
+            "relative z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
+          }`}>
+          <Link to="/settings">
+            <IoMdSettings
+              className={`mx-16 text-5xl ${
+                active == "stng" ? " text-primary" : " text-white my-20"
+              }`}
+            />
+          </Link>
         </div>
         <div onClick={handelLogout} className="px-16 pt-40 pb-12">
           <FiLogOut className="text-5xl text-white " />
