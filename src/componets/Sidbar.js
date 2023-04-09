@@ -21,6 +21,7 @@ const Sidbar = ({ active }) => {
   return (
     <div className="bg-primary w-full rounded-xl">
       <div>
+        <div className="relative ">
         <image>
           <img
             className="px-10 pt-8 rounded-full  "
@@ -28,13 +29,15 @@ const Sidbar = ({ active }) => {
             alt="profileimg"
             loading="lazy"
           />
-          <BsCloudUpload />
         </image>
-
+        <BsCloudUpload className="absolute top-[72px] right-[80px] text-3xl" />
+        <div className="w-24 h-24 bg-white rounded-full absolute top-0 left-0"></div>
+        </div>
+        
         <div
           className={`${
             active == "home" &&
-            "relative z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
+            "relative my-20 z-10 after:absolute after:top-0 after:left-0 after:bg-white after:content-[''] after:h-full after:w-[100%] after:z-[-1] flex flex-col items-center text-center p-[25px] after:rounded-lg before:absolute before:top-0 before:right-0 before:bg-primary before:content-[''] before:h-full before:w-[23px] before:rounded-l-lg before:drop-shadow-lg"
           }`}
         >
           <Link to="/home">
