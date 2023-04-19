@@ -18,6 +18,7 @@ const Sidbar = ({ active }) => {
       navigate("/login");
     });
   };
+
   return (
     <div className="bg-primary w-full rounded-xl">
       <div>
@@ -31,7 +32,9 @@ const Sidbar = ({ active }) => {
           />
         </image>
         <BsCloudUpload className="absolute top-[72px] right-[80px] text-3xl" />
-        <div className="w-24 h-24 bg-white rounded-full absolute top-0 left-0"></div>
+        <Link to="/profileImgUpload">
+        <div className="w-24 h-24 hover:bg-[rgba(143,133,133,0.3)] rounded-full absolute top-[34px] left-[41px]"></div>
+        </Link>
         </div>
         
         <div

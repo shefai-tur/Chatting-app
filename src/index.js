@@ -14,6 +14,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import Settings from "./pages/Settings";
 import Notification from "./pages/Notification";
+import ProfileImgUpload from "./componets/ProfileImgUpload";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/settings",
     element: <Settings/>,
+  },
+  {
+    path: "/profileImgUpload",
+    element: <ProfileImgUpload/>,
   },
   
 ]);
