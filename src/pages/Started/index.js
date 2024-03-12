@@ -13,7 +13,7 @@ const Started = () => {
       </image>
       <div className="bg-primary ml-2.5 rounded-t-[20%]">
         <h1 className=" pt-20 text-3xl text-white text-center font-nuni font-black	">
-          Welcome to “College-Connect”
+          Welcome to “Chatting”
         </h1>
         <h2 className="mx-auto text-2xl text-white text-center font-nuni font-medium mt-8 w-60">
           The place where you will find friends to chat with
